@@ -27,3 +27,31 @@ enum ParaEnum {
 Note "1" -- "subjects 0..*" Subject
 @enduml
 ```
+
+## mockMvc : controller 테스트 ....
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
