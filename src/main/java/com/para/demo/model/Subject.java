@@ -5,5 +5,8 @@ public record Subject(
     String title,
     String content,
     ParaEnum para
-) {}
+) {
 
+    public Subject(Long subjectId, ParaEnum target) {
+        this(subjectId, null, null, target);
+    }}

@@ -95,7 +95,7 @@ public class NoteServiceTest {
                 new Subject(1L, "java", "grammar", ParaEnum.AREA),
                 new Subject(2L, "javascript", "lexical", ParaEnum.AREA),
                 new Subject(3L, "docker", "hub", ParaEnum.RESOURCE));
-        when(subjectPort.subjectList(any())).thenReturn(mockSubjectList);
+        when(subjectPort.subjects(any())).thenReturn(mockSubjectList);
 
         assertThat(noteService.registSubject(1L, 1L))
                 .hasSize(3);
@@ -107,14 +107,14 @@ public class NoteServiceTest {
         var mockRemovedList = List.of(
                 new Subject(2L, "javascript", "lexical", ParaEnum.AREA),
                 new Subject(3L, "docker", "hub", ParaEnum.RESOURCE));
-        when(subjectPort.subjectList(any())).thenReturn(mockRemovedList);
+        when(subjectPort.subjects(any())).thenReturn(mockRemovedList);
         assertThat(noteService.removeSubject(noteId, subjectId))
             .hasSize(2);
 
         var mockFinalList = List.of(
                 new Subject(2L, "javascript", "lexical", ParaEnum.AREA),
                 new Subject(3L, "docker", "hub", ParaEnum.RESOURCE));
-        when(subjectPort.subjectList(any())).thenReturn(mockFinalList);
+        when(subjectPort.subjects(any())).thenReturn(mockFinalList);
         assertThat(noteService.subjectList(noteId))
             .hasSize(2);
     }

@@ -50,18 +50,18 @@ public class NoteService implements NoteUsecase{
     @Override
     public List<Subject> registSubject(Long noteId, Long subjectId) {
         subjectPort.registSubject(noteId, subjectId);
-        return subjectPort.subjectList(noteId);
+        return subjectPort.subjects(noteId);
     }
 
     @Override
     public List<Subject> removeSubject(Long noteId, Long subjectId) {
         subjectPort.removeSubject(noteId, subjectId);
-        return subjectPort.subjectList(noteId);
+        return subjectPort.subjects(noteId);
     }
 
     @Override
     public List<Subject> subjectList(Long noteId) {
-        return subjectPort.subjectList(noteId);
+        return subjectPort.subjects(noteId);
     }
     
 }
