@@ -14,6 +14,6 @@ public enum ParaEnum {
 
     @Override
     public String toString() {
-        return value;
+        return value.toUpperCase(); 
     }
 }

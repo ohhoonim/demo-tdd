@@ -58,7 +58,6 @@ public class SubjectService implements SubjectUsecase {
         return subjectPort.modifySubject(subject)
             .orElseThrow(() -> new RuntimeException("Failed to change para"));
     }
-    
 }
 
 
